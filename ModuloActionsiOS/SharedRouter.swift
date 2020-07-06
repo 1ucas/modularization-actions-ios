@@ -21,16 +21,16 @@ extension String: Storyboarded {
     }
 }
 
-class SharedRouter {
+open class SharedRouter {
     
-    static let navigationController = UINavigationController();
+    private static let navigationController = UINavigationController();
     
-    func navegarParaModuloNativo() {
+    public static func navegarParaModuloNativo() {
         let nativoViewController = "TelaNativaViewController".instantiate(storyboardName: "StoryboardNativo", bundle: Bundle(path: "com.manobray.ModuloNativoiOS"))
         SharedRouter.navigationController.pushViewController(nativoViewController, animated: true);
     }
     
-    func sair() {
+    public static func sair() {
         SharedRouter.navigationController.popToRootViewController(animated: true)
     }
     
