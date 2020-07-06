@@ -10,6 +10,7 @@
 		A09316FB24AFD5A600C14F89 /* ModuloActionsiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09316F124AFD5A600C14F89 /* ModuloActionsiOS.framework */; };
 		A093170024AFD5A600C14F89 /* ModuloActionsiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09316FF24AFD5A600C14F89 /* ModuloActionsiOSTests.swift */; };
 		A093170224AFD5A600C14F89 /* ModuloActionsiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A09316F424AFD5A600C14F89 /* ModuloActionsiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A093170D24AFD5BD00C14F89 /* SharedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093170C24AFD5BD00C14F89 /* SharedRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		A09316FA24AFD5A600C14F89 /* ModuloActionsiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuloActionsiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09316FF24AFD5A600C14F89 /* ModuloActionsiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuloActionsiOSTests.swift; sourceTree = "<group>"; };
 		A093170124AFD5A600C14F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A093170C24AFD5BD00C14F89 /* SharedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				A09316F424AFD5A600C14F89 /* ModuloActionsiOS.h */,
 				A09316F524AFD5A600C14F89 /* Info.plist */,
+				A093170C24AFD5BD00C14F89 /* SharedRouter.swift */,
 			);
 			path = ModuloActionsiOS;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					A09316F024AFD5A600C14F89 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					A09316F924AFD5A600C14F89 = {
 						CreatedOnToolsVersion = 11.5;
@@ -195,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A093170D24AFD5BD00C14F89 /* SharedRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		A093170624AFD5A600C14F89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XCKQJC262X;
@@ -356,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manobray.ModuloActionsiOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +371,7 @@
 		A093170724AFD5A600C14F89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XCKQJC262X;
@@ -388,6 +396,7 @@
 		A093170924AFD5A600C14F89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCKQJC262X;
 				INFOPLIST_FILE = ModuloActionsiOSTests/Info.plist;
@@ -406,6 +415,7 @@
 		A093170A24AFD5A600C14F89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCKQJC262X;
 				INFOPLIST_FILE = ModuloActionsiOSTests/Info.plist;
