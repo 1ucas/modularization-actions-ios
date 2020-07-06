@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "ActionsiOS"
-    s.version          = "1.0.2"
+    s.version          = "1.0.3"
     s.summary          = "Modulo de roteamento no iOS"
     s.homepage         = "https://github.com/1ucas/modularization-actions-ios"
     s.license          = 'Code is MIT.'

@@ -26,7 +26,7 @@ open class SharedRouter {
     private static let navigationController = UINavigationController();
     
     public static func navegarParaModuloNativo() {
-        let nativoViewController = "TelaNativaViewController".instantiate(storyboardName: "StoryboardNativo", bundle: Bundle(path: "com.manobray.ModuloNativoiOS"))
+        let nativoViewController = "TelaNativaViewController".instantiate(storyboardName: "StoryboardNativo", bundle: Bundle(identifier: "com.manobray.ModuloNativoiOS"))
         SharedRouter.navigationController.pushViewController(nativoViewController, animated: true);
     }
     
