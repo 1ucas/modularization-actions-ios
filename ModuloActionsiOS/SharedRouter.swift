@@ -23,16 +23,23 @@ extension String: Storyboarded {
 
 open class SharedRouter {
     
-    private static let navigationController = UINavigationController();
+    private static var navigationController: UINavigationController?
     
-    public static func navegarParaModuloNativo() {
-        let nativoViewController = "TelaNativaViewController".instantiate(storyboardName: "StoryboardNativo", bundle: Bundle(identifier: "com.manobray.ModuloNativoiOS"))
-        SharedRouter.navigationController.pushViewController(nativoViewController, animated: true);
+    public static func navegarParaModuloNativo(navigationController: UINavigationController, callback: @escaping (String) -> Void) {
+        let nativoViewController = "TelaNativaViewController".instantiate(storyboardName: "StoryboardNativo", bundle: Bundle(identifier: "com.manobray.ModuloNativoiOS")) as? CallbackViewController
+        if let vc = nativoViewController {
+            vc.callback = callback;
+            self.navigationController = navigationController
+            navigationController.pushViewController(vc, animated: true);
+        }
     }
     
     public static func sair() {
-        SharedRouter.navigationController.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
-    
+}
+
+open class CallbackViewController : UIViewController {
+    open var callback: ((String) -> Void)? = nil;
 }
