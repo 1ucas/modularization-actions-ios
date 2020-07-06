@@ -5,8 +5,6 @@
 //  Created by Lucas on 03/07/20.
 //  Copyright © 2020 Lucas. All rights reserved.
 //
-
-import Foundation
 import UIKit
 
 public protocol Storyboarded {
